@@ -1,5 +1,5 @@
 import { desktop, sidebarShown, main } from "../index.js";
-import { closeSidebar, sidebar } from "./sidebar";
+import { closeSidebar, sidebar } from "../sidebar/sidebar.js";
 
 const blurredSpace = document.querySelector('.blurred-space');
 const callButton = document.querySelectorAll('.button__call');

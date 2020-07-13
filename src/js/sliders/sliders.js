@@ -1,4 +1,4 @@
-import { closeSidebar } from "./sidebar.js";
+import { closeSidebar } from "../sidebar/sidebar.js";
 
 const tablet = window.matchMedia("(min-width: 768px)");
 const activeClasses = document.querySelectorAll(".slide");

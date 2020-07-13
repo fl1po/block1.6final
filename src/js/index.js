@@ -1,7 +1,7 @@
 import "../scss/style.scss";
-import "./add/sidebar.js";
-import "./add/modal.js";
-import "./add/sliders.js";
+import "./sidebar/sidebar.js";
+import "./modal/modal.js";
+import "./sliders/sliders.js";
 
 export const desktop = window.matchMedia("(min-width: 1120px)");
 export let sidebarShown = false;
