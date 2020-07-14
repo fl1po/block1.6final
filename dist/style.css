@@ -517,9 +517,6 @@ input {
 .input__message {
   padding-bottom: 80px; }
 
-.input__inner::-webkit-input-placeholder {
-  color: #B5B6BC; }
-
 .input__inner::-moz-placeholder {
   color: #B5B6BC; }
 

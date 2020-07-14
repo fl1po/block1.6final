@@ -17,6 +17,7 @@ const closeCallModal = function () {
   callModal.style.transform = "translateX(460px)";
   if (!desktop.matches) { sidebar.style.transform = "translateX(0px)"; }
   callCloseButton.style.filter = "opacity(0)";
+  callCloseButton.style.transform = "translate(0px, 0px)";
   blurredSpace.style.zIndex = "2";
   let modalCallShown = false;
   let sidebarShown = false;
@@ -31,6 +32,7 @@ const closeFeedbackModal = function () {
   feedbackModal.style.transform = "translateX(460px)";
   if (!desktop.matches) { sidebar.style.transform = "translateX(0px)"; }
   feedBackCloseButton.style.filter = "opacity(0)";
+  feedBackCloseButton.style.transform = "translate(0px, 0px)";
   blurredSpace.style.zIndex = "2";
   let modalFeedbackShown = false;
   let sidebarShown = false;
@@ -55,7 +57,9 @@ document.querySelectorAll('.button__call').forEach(feedbackButton => {
     if (!modalCallShown) {
       callModal.style.transform = "translateX(-460px)";
       callCloseButton.style.filter = "opacity(1)";
-      callCloseButton.style.transform = "translate(-80px, 20px)";
+      if (desktop.matches) {
+        callCloseButton.style.transform = "translate(-80px, 20px)";
+      }
       let modalCallShown = true;
       main.style.filter = "opacity(0.8)";
       blurredSpace.style.display = "block";
@@ -75,7 +79,9 @@ document.querySelectorAll('.button__chat').forEach(feedbackButton => {
     if (!modalFeedbackShown) {
       feedbackModal.style.transform = "translateX(-460px)";
       feedBackCloseButton.style.filter = "opacity(1)";
-      feedBackCloseButton.style.transform = "translate(-80px, 20px)";
+      if (desktop.matches) {
+        feedBackCloseButton.style.transform = "translate(-80px, 20px)";
+      }
       let modalFeedbackShown = true;
       main.style.filter = "opacity(0.8)";
       blurredSpace.style.display = "block";
