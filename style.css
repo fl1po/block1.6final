@@ -62,6 +62,7 @@
   cursor: pointer; }
 
 .show-all {
+  margin-top: 15px;
   margin-left: 32px;
   font-weight: bold;
   padding-bottom: 10px;
@@ -588,7 +589,9 @@ input {
   .feedback__close-button {
     position: absolute; }
   .call__close-button {
-    position: absolute; } }
+    position: absolute; }
+  .feedback {
+    max-width: 320px; } }
 
 .uppermenu__mobile {
   background-color: white; }
@@ -770,8 +773,7 @@ input {
     white-space: nowrap; } }
 
 .main__description {
-  margin: 15px 0 10px 30px;
-  padding-right: 3%; }
+  margin: 15px 0 10px 30px; }
 
 .description {
   display: flex;
