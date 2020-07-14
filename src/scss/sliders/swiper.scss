@@ -17,7 +17,7 @@
 
 .slide {
   justify-content: space-around;
-  border: 2px solid #EAEAEA;
+  border: 2px solid #eaeaea;
   border-radius: 6px;
   background-color: white;
   font-size: 16px;
@@ -205,7 +205,7 @@
     display: none;
   }
 
-  .slide:nth-child(-n+8) {
+  .slide:nth-child(-n + 8) {
     display: flex !important;
   }
 }
@@ -279,7 +279,7 @@
     min-height: 64px;
     padding: 23px 24px;
     border: 1px solid $bgColor;
-    color: #1B1C21;
+    color: #1b1c21;
   }
 
   .brands__slide {

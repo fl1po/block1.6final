@@ -26,7 +26,7 @@
   margin-bottom: 24px;
 
   &::before {
-    content: url('../img/highlight.svg');
+    content: url("../img/highlight.svg");
     margin-left: -16px;
     margin-top: 0px;
     max-height: 22px;
@@ -41,7 +41,7 @@
 }
 
 .input {
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
   border-radius: 8px;
   margin-bottom: 16px;
   width: 90%;
@@ -57,7 +57,7 @@ input {
   position: relative;
 
   &:focus {
-      outline: none;
+    outline: none;
   }
 }
 
@@ -74,16 +74,16 @@ input {
 }
 
 .input__inner::placeholder {
-  color: #B5B6BC;
+  color: #b5b6bc;
 }
 
 .feedback__agreement {
-    margin-bottom: 19px;
+  margin-bottom: 19px;
 }
 
 .feedback__order {
   position: absolute;
-  right: 5%
+  right: 5%;
 }
 
 .call {
@@ -113,7 +113,7 @@ input {
   margin-bottom: 24px;
 
   &::before {
-    content: url('../img/highlight.svg');
+    content: url("../img/highlight.svg");
     margin-left: -16px;
     margin-top: 0px;
     max-height: 22px;
@@ -128,12 +128,12 @@ input {
 }
 
 .call__agreement {
-    margin-bottom: 19px;
+  margin-bottom: 19px;
 }
 
 .call__order {
   position: absolute;
-  right: 5%
+  right: 5%;
 }
 
 .feedback {
@@ -151,15 +151,14 @@ input {
 
 @media (min-width: 1120px) {
   .feedback__close-button {
-      position: absolute;
+    position: absolute;
   }
 
   .call__close-button {
-      position: absolute;
+    position: absolute;
   }
 
-  .feedback{
+  .feedback {
     max-width: 320px;
   }
 }
-

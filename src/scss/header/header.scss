@@ -12,7 +12,8 @@
   display: flex;
 }
 
-.service-title, .service-title {
+.service-title,
+.service-title {
   padding: 0 30px;
 }
 
@@ -30,7 +31,7 @@
   justify-content: center;
 
   &:hover {
-    border: 2px solid #B8FFEC;
+    border: 2px solid $bottomBorder;
     padding: 8px 10px 8px 16px;
     box-sizing: border-box;
     border-radius: 6px;
@@ -45,10 +46,13 @@
     justify-content: space-around;
     margin: auto 0px;
     min-width: 320px;
-    border-bottom: 2px solid #B8FFEC;
+    border-bottom: 2px solid $bottomBorder;
   }
 
-  .divider--mobile, .uppermenu__buttons > .button__call, .uppermenu__buttons > .button__chat, .uppermenu__buttons > .button__profile {
+  .divider--mobile,
+  .uppermenu__buttons > .button__call,
+  .uppermenu__buttons > .button__chat,
+  .uppermenu__buttons > .button__profile {
     display: none;
   }
 
@@ -84,7 +88,7 @@
     margin-bottom: 0px;
 
     &::before {
-      content: url('../img/highlight.svg');
+      content: url("../img/highlight.svg");
       margin-left: -30px;
       margin-top: 0px;
       max-height: 22px;
@@ -106,7 +110,8 @@
     margin-right: 8%;
   }
 
-  .navigation::-webkit-scrollbar, .uppermenu__desktop {
+  .navigation::-webkit-scrollbar,
+  .uppermenu__desktop {
     display: none;
   }
 }
@@ -115,7 +120,7 @@
   .uppermenu__mobile {
     width: 100%;
     height: 88px;
-    border-bottom: 2px solid #B8FFEC;
+    border-bottom: 2px solid $bottomBorder;
     display: flex;
   }
 
@@ -156,7 +161,7 @@
     margin-bottom: 0px;
 
     &::before {
-      content: url('../img/highlight.svg');
+      content: url("../img/highlight.svg");
       margin-left: -30px;
       margin-top: 0px;
       max-height: 22px;
@@ -185,7 +190,9 @@
 }
 
 @media screen and (min-width: 1120px) {
-  .uppermenu__mobile, .header__service-title, .description__text--all {
+  .uppermenu__mobile,
+  .header__service-title,
+  .description__text--all {
     display: none;
   }
 
@@ -207,7 +214,7 @@
     margin-right: auto;
 
     &::before {
-      content: url('../img/highlight.svg');
+      content: url("../img/highlight.svg");
       margin-left: -40px;
       margin-top: 0px;
       max-height: 22px;

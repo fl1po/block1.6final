@@ -30,7 +30,9 @@
   letter-spacing: -0.2px;
   margin-left: 15px;
 
-  &:link, &:visited, &:active {
+  &:link,
+  &:visited,
+  &:active {
     color: black;
   }
 }
@@ -51,19 +53,21 @@
   font-weight: bold;
   color: black;
 
-  &:link, &:visited, &:active {
+  &:link,
+  &:visited,
+  &:active {
     color: black;
-}
+  }
 
   &:hover {
     color: $greyLink;
   }
-}
 
-.get-offer__link::after {
-  content: url('../img/line.svg');
-  padding-left: 10px;
-  float: right;
+  &::after {
+    content: url("../img/line.svg");
+    padding-left: 10px;
+    float: right;
+  }
 }
 
 @media (max-width: 767px) {
@@ -73,7 +77,9 @@
     margin-right: 30px;
   }
 
-  .description__text--full, .description__text--tabletplus, .description__text--all {
+  .description__text--full,
+  .description__text--tabletplus,
+  .description__text--all {
     display: none;
   }
 
@@ -113,7 +119,8 @@
     justify-content: flex-end;
   }
 
-  .description__text--full, .description__text--all {
+  .description__text--full,
+  .description__text--all {
     display: none;
   }
 }
