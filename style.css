@@ -590,8 +590,10 @@ input {
   .feedback__close-button {
     position: absolute; }
   .call__close-button {
-    position: absolute; }
-  .feedback {
+    position: absolute; } }
+
+@media (max-width: 768px) {
+  .feedback, .call {
     max-width: 320px; } }
 
 .uppermenu__mobile {
