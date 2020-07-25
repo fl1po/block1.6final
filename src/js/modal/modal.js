@@ -7,19 +7,19 @@ const callModal = document.querySelector('.call');
 const callCloseButton = document.querySelector('.call__close-button');
 const feedbackButton = document.querySelectorAll('.button__chat');
 const feedbackModal = document.querySelector('.feedback');
-const feedBackCloseButton = document.querySelector('.feedback__close-button');
+const feedbackCloseButton = document.querySelector('.feedback__close-button');
 
 let modalCallShown = false;
 let modalFeedbackShown = false;
 
-const closeCallModal = function () {
+const closeModal = function (modal, button, state) {
   event.preventDefault();
-  callModal.style.transform = "translateX(460px)";
+  modal.style.transform = "translateX(460px)";
   if (!desktop.matches) { sidebar.style.transform = "translateX(0px)"; }
-  callCloseButton.style.filter = "opacity(0)";
-  callCloseButton.style.transform = "translate(0px, 0px)";
+  button.style.filter = "opacity(0)";
+  button.style.transform = "translate(0px, 0px)";
   blurredSpace.style.zIndex = "2";
-  let modalCallShown = false;
+  state = false;
   let sidebarShown = false;
   if (!sidebarShown) {
     main.style.filter = "opacity(1)";
@@ -27,68 +27,45 @@ const closeCallModal = function () {
   }
 }
 
-const closeFeedbackModal = function () {
+const openModal = function(state, modal, button) {
   event.preventDefault();
-  feedbackModal.style.transform = "translateX(460px)";
-  if (!desktop.matches) { sidebar.style.transform = "translateX(0px)"; }
-  feedBackCloseButton.style.filter = "opacity(0)";
-  feedBackCloseButton.style.transform = "translate(0px, 0px)";
-  blurredSpace.style.zIndex = "2";
-  let modalFeedbackShown = false;
-  let sidebarShown = false;
-  if (!sidebarShown) {
-    main.style.filter = "opacity(1)";
-    blurredSpace.style.display = "none";
-  }
+    closeSidebar();
+    blurredSpace.style.zIndex = "4";
+    if (!state) {
+      modal.style.transform = "translateX(-460px)";
+      button.style.filter = "opacity(1)";
+      if (desktop.matches) {
+        button.style.transform = "translate(-80px, 20px)";
+      }
+      let state = true;
+      main.style.filter = "opacity(0.8)";
+      blurredSpace.style.display = "block";
+    }
 }
 
 blurredSpace.addEventListener('click', function () {
-  closeFeedbackModal();
-  closeCallModal();
+  closeModal(feedbackModal, feedbackCloseButton, modalFeedbackShown);
+  closeModal(callModal, callCloseButton, modalCallShown);
   closeSidebar();
   blurredSpace.style.zIndex = "2";
 })
 
 document.querySelectorAll('.button__call').forEach(feedbackButton => {
   feedbackButton.addEventListener('click', function () {
-    event.preventDefault();
-    closeSidebar();
-    blurredSpace.style.zIndex = "4";
-    if (!modalCallShown) {
-      callModal.style.transform = "translateX(-460px)";
-      callCloseButton.style.filter = "opacity(1)";
-      if (desktop.matches) {
-        callCloseButton.style.transform = "translate(-80px, 20px)";
-      }
-      let modalCallShown = true;
-      main.style.filter = "opacity(0.8)";
-      blurredSpace.style.display = "block";
-    }
+    openModal(modalCallShown, callModal, callCloseButton);
   });
-})
-
-callCloseButton.addEventListener('click', function () {
-  closeCallModal();
 })
 
 document.querySelectorAll('.button__chat').forEach(feedbackButton => {
   feedbackButton.addEventListener('click', function () {
-    event.preventDefault();
-    closeSidebar();
-    blurredSpace.style.zIndex = "4";
-    if (!modalFeedbackShown) {
-      feedbackModal.style.transform = "translateX(-460px)";
-      feedBackCloseButton.style.filter = "opacity(1)";
-      if (desktop.matches) {
-        feedBackCloseButton.style.transform = "translate(-80px, 20px)";
-      }
-      let modalFeedbackShown = true;
-      main.style.filter = "opacity(0.8)";
-      blurredSpace.style.display = "block";
-    }
+    openModal(modalFeedbackShown, feedbackModal, feedbackCloseButton);
   });
 })
 
-feedBackCloseButton.addEventListener('click', function () {
-  closeFeedbackModal();
+callCloseButton.addEventListener('click', function () {
+  closeModal(callModal, callCloseButton, modalCallShown);
+})
+
+feedbackCloseButton.addEventListener('click', function () {
+  closeModal(feedbackModal, feedbackCloseButton, modalFeedbackShown);
 })

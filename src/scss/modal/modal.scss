@@ -157,8 +157,10 @@ input {
   .call__close-button {
     position: absolute;
   }
+}
 
-  .feedback {
+@media (max-width: 768px) {
+  .feedback, .call {
     max-width: 320px;
   }
 }
