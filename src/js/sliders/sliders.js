@@ -37,35 +37,41 @@ let techSwiper = new Swiper('.tech__container', {
 
 const brandsShowAll = document.querySelector('.brands__show-all');
 const techShowAll = document.querySelector('.tech__show-all');
+const techWrapper = document.querySelector(".tech__wrapper");
+const brandsWrapper = document.querySelector(".brands__wrapper");
+const techShowAllImg = document.querySelector(".tech__show-all > .show-all__img");
+const techShowAllText = document.querySelector(".tech__show-all > .show-all__text");
+const brandsShowAllImg = document.querySelector(".brands__show-all > .show-all__img");
+const brandsShowAllText = document.querySelector(".brands__show-all > .show-all__text");
 let brandsListShown = false;
 let techListShown = false;
 
 const showTechButtonOn = function () {
   techListShown = true;
-  document.querySelector(".tech__show-all > .show-all__img").style.transform = "rotate(180deg)";
-  document.querySelector(".tech__show-all > .show-all__text").textContent = "Скрыть";
-  document.querySelector(".tech__wrapper").style.height = "100%";
+  techShowAllImg.style.transform = "rotate(180deg)";
+  techShowAllText.textContent = "Скрыть";
+  techWrapper.style.height = "100%";
 }
 
 const showTechButtonOff = function () {
   techListShown = false;
-  document.querySelector(".tech__show-all > .show-all__img").style.transform = "rotate(0deg)";
-  document.querySelector(".tech__show-all > .show-all__text").textContent = "Показать все";
-  document.querySelector(".tech__wrapper").style.height = "160px";
+  techShowAllImg.style.transform = "rotate(0deg)";
+  techShowAllText.textContent = "Показать все";
+  techWrapper.style.height = "160px";
 }
 
 const showBrandsButtonOn = function () {
   brandsListShown = true;
-  document.querySelector(".brands__show-all > .show-all__img").style.transform = "rotate(180deg)";
-  document.querySelector(".brands__show-all > .show-all__text").textContent = "Скрыть";
-  document.querySelector(".brands__wrapper").style.height = "100%";
+  brandsShowAllImg.style.transform = "rotate(180deg)";
+  brandsShowAllText.textContent = "Скрыть";
+  brandsWrapper.style.height = "100%";
 }
 
 const showBrandsButtonOff = function () {
   brandsListShown = false;
-  document.querySelector(".brands__show-all > .show-all__img").style.transform = "rotate(0deg)";
-  document.querySelector(".brands__show-all > .show-all__text").textContent = "Показать все";
-  document.querySelector(".brands__wrapper").style.height = "160px";
+  brandsShowAllImg.style.transform = "rotate(0deg)";
+  brandsShowAllText.textContent = "Показать все";
+  brandsWrapper.style.height = "160px";
 }
 
 techShowAll.addEventListener('click', function () {
